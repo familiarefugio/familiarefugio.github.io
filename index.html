@@ -13,6 +13,7 @@
       height: 100%;
       overflow: hidden;
       font-family: sans-serif;
+      background-color: black;
     }
 
     #video-fondo {
@@ -27,14 +28,19 @@
       z-index: -1;
       object-fit: cover;
       object-position: center center;
-      background-color: black;
     }
 
-    /* Ajuste para móviles: mostrar el video completo sin recorte */
-    @media (max-width: 768px) {
+    /* ✅ Ajuste para móviles o pantallas angostas */
+    @media (max-width: 1024px) {
       #video-fondo {
         object-fit: contain;
-        object-position: top center;
+        object-position: center 10%;
+        background-color: black;
+      }
+
+      /* 🧪 Prueba visual: borde verde si esta media query se activa */
+      body {
+        outline: 5px solid lime;
       }
     }
 
