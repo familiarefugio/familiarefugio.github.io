@@ -10,9 +10,10 @@
     html, body {
       margin: 0;
       padding: 0;
-      height: 100%;
-      overflow: hidden;
       font-family: sans-serif;
+      background-color: black;
+      scroll-behavior: smooth;
+      color: white;
     }
 
     #video-fondo {
@@ -24,25 +25,10 @@
       min-height: 100%;
       width: auto;
       height: auto;
-      z-index: -1;
+      z-index: -2;
       object-fit: cover;
       object-position: center top;
-      background-color: black;
     }
-
-    /* Ajuste para móviles: mostrar el video completo sin recorte */
-    @media (max-width: 768px) {
-   #video-fondo {
-    object-fit: contain;
-    object-position: center top;
-    height: 100vh;
-    width: auto;
-  }
-
-  .contenido {
-    padding-top: 4vh;
-  }
-}
 
     .filtro {
       position: fixed;
@@ -51,17 +37,39 @@
       width: 100%;
       height: 100%;
       background-color: rgba(0, 0, 0, 0.4);
-      z-index: 0;
+      z-index: -1;
     }
 
-    .contenido {
-      position: relative;
-      z-index: 1;
-      color: white;
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 1rem;
+      z-index: 10;
       text-align: center;
-      padding-top: 5vh;
-      padding-left: 2rem;
-      padding-right: 2rem;
+    }
+
+    nav a {
+      color: #ffd700;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: white;
+    }
+
+    section {
+      padding: 8rem 2rem 5rem;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: transparent;
     }
 
     h1 {
@@ -69,9 +77,15 @@
       margin-bottom: 1rem;
     }
 
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
     p {
-      font-size: 1.5rem;
-      margin-bottom: 2rem;
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin-bottom: 1rem;
     }
 
     .redes-sociales {
@@ -79,6 +93,7 @@
       flex-direction: column;
       align-items: center;
       gap: 2rem;
+      margin-top: 2rem;
     }
 
     .redes-sociales a {
@@ -97,18 +112,41 @@
         font-size: 2rem;
       }
 
-      p {
-        font-size: 1.2rem;
+      h2 {
+        font-size: 1.5rem;
       }
 
       .redes-sociales a {
         font-size: 4rem;
       }
     }
+
+    /* Ajustes móviles: video no desaparece */
+    @media (max-width: 1024px) and (orientation: portrait) {
+      html, body {
+        background-color: black;
+        min-height: 100vh;
+      }
+
+      #video-fondo {
+        object-fit: contain;
+        object-position: center top;
+        max-height: 100vh;
+        max-width: 100vw;
+      }
+    }
+
+    @media (max-width: 1024px) and (orientation: landscape) {
+      #video-fondo {
+        object-fit: cover;
+        object-position: center top;
+      }
+    }
   </style>
 </head>
 <body>
 
+  <!-- VIDEO DE FONDO -->
   <video id="video-fondo" autoplay muted loop playsinline>
     <source src="videofondo.mp4" type="video/mp4" />
     Tu navegador no soporta la reproducción de video.
@@ -116,25 +154,38 @@
 
   <div class="filtro"></div>
 
-  <div class="contenido">
+  <!-- NAVEGACIÓN -->
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#quienes-somos">Quiénes somos</a>
+    <a href="#como-encontrarnos">Cómo encontrarnos</a>
+  </nav>
+
+  <!-- SECCIÓN INICIO -->
+  <section id="inicio">
     <h1>¡Bienvenido!</h1>
     <p>Somos Un Refugio para la Familia</p>
-
     <div class="redes-sociales">
-      <a href="https://www.instagram.com/unrefugioparalafamilia/" target="_blank" aria-label="Instagram">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a href="https://www.facebook.com/unrefugioparalafamilia" target="_blank" aria-label="Facebook">
-        <i class="fab fa-facebook-square"></i>
-      </a>
-      <a href="https://wa.me/56975347631" target="_blank" aria-label="WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-      </a>
-      <a href="https://open.spotify.com/playlist/0kLcnwoaiyIFwWOKgMKVMI?si=690aeeb9cff14123" target="_blank" aria-label="Spotify">
-        <i class="fab fa-spotify"></i>
-      </a>
+      <a href="https://www.instagram.com/unrefugioparalafamilia/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.facebook.com/unrefugioparalafamilia" target="_blank"><i class="fab fa-facebook-square"></i></a>
+      <a href="https://wa.me/56975347631" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://open.spotify.com/playlist/0kLcnwoaiyIFwWOKgMKVMI?si=690aeeb9cff14123" target="_blank"><i class="fab fa-spotify"></i></a>
     </div>
-  </div>
+  </section>
+
+  <!-- SECCIÓN QUIÉNES SOMOS -->
+  <section id="quienes-somos">
+    <h2>Quiénes Somos</h2>
+    <p>Somos una comunidad cristiana comprometida con el amor de Dios, el servicio a las personas y la restauración de las familias. Queremos ser un refugio para todos aquellos que buscan fe, propósito y esperanza.</p>
+  </section>
+
+  <!-- SECCIÓN CÓMO ENCONTRARNOS -->
+  <section id="como-encontrarnos">
+    <h2>Cómo Encontrarnos</h2>
+    <p>Nos reunimos cada semana en nuestra sede principal en Coelemu. También puedes contactarnos a través de nuestras redes sociales o WhatsApp.</p>
+    <p><strong>Dirección:</strong> Calle Ejemplo 123, Coelemu, Chile</p>
+    <p><strong>Email:</strong> contacto@refugiofamilia.cl</p>
+  </section>
 
 </body>
 </html>
