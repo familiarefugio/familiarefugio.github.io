@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Somos Un Refugio para la Familia</title>
-  <link rel="icon" href="https://familiarefugio.github.io/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
     html, body {
       margin: 0;
@@ -35,7 +35,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: rgba(0, 0, 0, 0.4); /* filtro oscuro opcional */
+      background-color: rgba(0, 0, 0, 0.4);
       z-index: 0;
     }
 
@@ -44,7 +44,7 @@
       z-index: 1;
       color: white;
       text-align: center;
-      padding-top: 5vh; /* más arriba */
+      padding-top: 5vh;
       padding-left: 2rem;
       padding-right: 2rem;
     }
@@ -56,20 +56,19 @@
 
     p {
       font-size: 1.5rem;
-      margin: 0;
+      margin-bottom: 2rem;
     }
 
     .redes-sociales {
-      margin-top: 2rem;
       display: flex;
-      justify-content: center;
-      gap: 1.5rem;
-      flex-wrap: wrap;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
     }
 
     .redes-sociales a {
       color: white;
-      font-size: 2.5rem;
+      font-size: 5rem; /* íconos grandes */
       text-decoration: none;
       transition: color 0.3s;
     }
@@ -88,7 +87,7 @@
       }
 
       .redes-sociales a {
-        font-size: 1.5rem;
+        font-size: 4rem; /* ligeramente más pequeño en móviles muy estrechos */
       }
     }
   </style>
@@ -96,7 +95,7 @@
 <body>
 
   <video id="video-fondo" autoplay muted loop playsinline>
-    <source src="videofondo.mp4" type="video/mp4">
+    <source src="videofondo.mp4" type="video/mp4" />
     Tu navegador no soporta la reproducción de video.
   </video>
 
@@ -107,10 +106,18 @@
     <p>Somos Un Refugio para la Familia</p>
 
     <div class="redes-sociales">
-      <a href="https://www.instagram.com/unrefugioparalafamilia/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-      <a href="https://www.facebook.com/unrefugioparalafamilia" target="_blank" aria-label="Facebook"><i class="fa-brands fa-square-facebook"></i></a>
-      <a href="https://wa.me/56975347631" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-      <a href="https://open.spotify.com/playlist/0kLcnwoaiyIFwWOKgMKVMI?si=690aeeb9cff14123" target="_blank" aria-label="Spotify"><i class="fab fa-spotify"></i></a>
+      <a href="https://www.instagram.com/unrefugioparalafamilia/" target="_blank" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.facebook.com/unrefugioparalafamilia" target="_blank" aria-label="Facebook">
+        <i class="fab fa-facebook-square"></i>
+      </a>
+      <a href="https://wa.me/56975347631" target="_blank" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+      <a href="https://open.spotify.com/playlist/0kLcnwoaiyIFwWOKgMKVMI?si=690aeeb9cff14123" target="_blank" aria-label="Spotify">
+        <i class="fab fa-spotify"></i>
+      </a>
     </div>
   </div>
 
