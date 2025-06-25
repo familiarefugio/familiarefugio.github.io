@@ -10,9 +10,9 @@
     html, body {
       margin: 0;
       padding: 0;
-      height: 100%;
-      overflow: hidden;
       font-family: sans-serif;
+      background-color: black;
+      scroll-behavior: smooth;
     }
 
     #video-fondo {
@@ -27,22 +27,7 @@
       z-index: -1;
       object-fit: cover;
       object-position: center top;
-      background-color: black;
     }
-
-    /* Ajuste para móviles: mostrar el video completo sin recorte */
-    @media (max-width: 768px) {
-   #video-fondo {
-    object-fit: contain;
-    object-position: center top;
-    height: 100vh;
-    width: auto;
-  }
-
-  .contenido {
-    padding-top: 4vh;
-  }
-}
 
     .filtro {
       position: fixed;
@@ -54,14 +39,41 @@
       z-index: 0;
     }
 
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 1rem;
+      z-index: 2;
+      text-align: center;
+    }
+
+    nav a {
+      color: #ffd700;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+    nav a:hover {
+      color: white;
+    }
+
     .contenido {
       position: relative;
       z-index: 1;
       color: white;
       text-align: center;
-      padding-top: 5vh;
+      padding-top: 10vh;
       padding-left: 2rem;
       padding-right: 2rem;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
 
     h1 {
@@ -92,6 +104,24 @@
       color: #ffd700;
     }
 
+    .seccion {
+      padding: 4rem 2rem;
+      background-color: rgba(0, 0, 0, 0.85);
+      color: white;
+      text-align: center;
+    }
+
+    .seccion h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .seccion p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto 1rem;
+    }
+
     @media (max-width: 600px) {
       h1 {
         font-size: 2rem;
@@ -104,11 +134,49 @@
       .redes-sociales a {
         font-size: 4rem;
       }
+
+      nav a {
+        font-size: 0.95rem;
+      }
+    }
+
+    /* 📱 Ajustes para móviles en vertical */
+    @media (max-width: 1024px) and (orientation: portrait) {
+      html, body {
+        background-color: black;
+        overflow: auto;
+        min-height: 100vh;
+      }
+
+      #video-fondo {
+        object-fit: contain;
+        object-position: center top;
+        max-height: 100vh;
+        max-width: 100vw;
+        width: auto;
+        height: auto;
+      }
+    }
+
+    /* 📱 Móviles en horizontal */
+    @media (max-width: 1024px) and (orientation: landscape) {
+      #video-fondo {
+        object-fit: cover;
+        object-position: center top;
+      }
     }
   </style>
 </head>
 <body>
 
+  <!-- Navegación -->
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#quienes-somos">Quiénes somos</a>
+    <a href="#como-encontrarnos">Cómo encontrarnos</a>
+  </nav>
+
+  <!-- Fondo -->
   <video id="video-fondo" autoplay muted loop playsinline>
     <source src="videofondo.mp4" type="video/mp4" />
     Tu navegador no soporta la reproducción de video.
@@ -116,7 +184,8 @@
 
   <div class="filtro"></div>
 
-  <div class="contenido">
+  <!-- INICIO -->
+  <section id="inicio" class="contenido">
     <h1>¡Bienvenido!</h1>
     <p>Somos Un Refugio para la Familia</p>
 
@@ -134,7 +203,21 @@
         <i class="fab fa-spotify"></i>
       </a>
     </div>
-  </div>
+  </section>
+
+  <!-- QUIÉNES SOMOS -->
+  <section id="quienes-somos" class="seccion">
+    <h2>Quiénes Somos</h2>
+    <p>Somos una comunidad cristiana comprometida con el amor de Dios, el servicio a las personas y la restauración de las familias. Queremos ser un refugio para todos aquellos que buscan fe, propósito y esperanza.</p>
+  </section>
+
+  <!-- CÓMO ENCONTRARNOS -->
+  <section id="como-encontrarnos" class="seccion">
+    <h2>Cómo Encontrarnos</h2>
+    <p>Nos reunimos cada semana en nuestra sede principal en Coelemu. También puedes contactarnos a través de nuestras redes sociales o WhatsApp.</p>
+    <p><strong>Dirección:</strong> Calle Ejemplo 123, Coelemu, Chile</p>
+    <p><strong>Email:</strong> contacto@refugiofamilia.cl</p>
+  </section>
 
 </body>
 </html>
