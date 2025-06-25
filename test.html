@@ -10,10 +10,10 @@
     html, body {
       margin: 0;
       padding: 0;
+      height: 100%;
       font-family: sans-serif;
       background-color: black;
       scroll-behavior: smooth;
-      color: white;
     }
 
     #video-fondo {
@@ -70,6 +70,7 @@
       justify-content: center;
       text-align: center;
       background: transparent;
+      color: white;
     }
 
     h1 {
@@ -121,11 +122,10 @@
       }
     }
 
-    /* Ajustes móviles: video no desaparece */
     @media (max-width: 1024px) and (orientation: portrait) {
       html, body {
-        background-color: black;
         min-height: 100vh;
+        overflow: auto;
       }
 
       #video-fondo {
@@ -133,6 +133,8 @@
         object-position: center top;
         max-height: 100vh;
         max-width: 100vw;
+        width: auto;
+        height: auto;
       }
     }
 
@@ -146,7 +148,7 @@
 </head>
 <body>
 
-  <!-- VIDEO DE FONDO -->
+  <!-- Video de fondo -->
   <video id="video-fondo" autoplay muted loop playsinline>
     <source src="videofondo.mp4" type="video/mp4" />
     Tu navegador no soporta la reproducción de video.
@@ -154,17 +156,18 @@
 
   <div class="filtro"></div>
 
-  <!-- NAVEGACIÓN -->
+  <!-- Navegación -->
   <nav>
     <a href="#inicio">Inicio</a>
     <a href="#quienes-somos">Quiénes somos</a>
     <a href="#como-encontrarnos">Cómo encontrarnos</a>
   </nav>
 
-  <!-- SECCIÓN INICIO -->
+  <!-- INICIO -->
   <section id="inicio">
     <h1>¡Bienvenido!</h1>
     <p>Somos Un Refugio para la Familia</p>
+
     <div class="redes-sociales">
       <a href="https://www.instagram.com/unrefugioparalafamilia/" target="_blank"><i class="fab fa-instagram"></i></a>
       <a href="https://www.facebook.com/unrefugioparalafamilia" target="_blank"><i class="fab fa-facebook-square"></i></a>
@@ -173,13 +176,13 @@
     </div>
   </section>
 
-  <!-- SECCIÓN QUIÉNES SOMOS -->
+  <!-- QUIÉNES SOMOS -->
   <section id="quienes-somos">
     <h2>Quiénes Somos</h2>
     <p>Somos una comunidad cristiana comprometida con el amor de Dios, el servicio a las personas y la restauración de las familias. Queremos ser un refugio para todos aquellos que buscan fe, propósito y esperanza.</p>
   </section>
 
-  <!-- SECCIÓN CÓMO ENCONTRARNOS -->
+  <!-- CÓMO ENCONTRARNOS -->
   <section id="como-encontrarnos">
     <h2>Cómo Encontrarnos</h2>
     <p>Nos reunimos cada semana en nuestra sede principal en Coelemu. También puedes contactarnos a través de nuestras redes sociales o WhatsApp.</p>
