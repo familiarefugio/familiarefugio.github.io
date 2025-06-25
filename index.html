@@ -32,11 +32,17 @@
 
     /* Ajuste para móviles: mostrar el video completo sin recorte */
     @media (max-width: 768px) {
-      #video-fondo {
-        object-fit: contain;
-        object-position: top center;
-      }
-    }
+   #video-fondo {
+    object-fit: contain;
+    object-position: center top;
+    height: 100vh;
+    width: auto;
+  }
+
+  .contenido {
+    padding-top: 4vh;
+  }
+}
 
     .filtro {
       position: fixed;
