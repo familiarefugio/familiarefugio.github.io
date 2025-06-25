@@ -1,23 +1,69 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Mi primera página</title>
-<style>
-    body {
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bienvenidos a Un Refugio para la Familia</title>
+  <style>
+    /* Elimina márgenes y oculta scroll */
+    html, body {
       margin: 0;
       padding: 0;
-      background-image: url('background.jpg');
-      background-size: cover;
-      background-position: center;
-      height: 100vh;
-      color: white;
+      height: 100%;
+      overflow: hidden;
       font-family: sans-serif;
+    }
+
+    /* Estilo para el video de fondo */
+    #video-fondo {
+      position: fixed;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      z-index: -1;
+      object-fit: cover;
+    }
+
+    /* Contenido por encima del video */
+    .contenido {
+      position: relative;
+      z-index: 1;
+      color: white;
+      text-align: center;
+      padding: 20vh 2rem;
+    }
+
+    /* Mejora contraste de texto si el video es muy claro */
+    .filtro {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4); /* opcional */
+      z-index: 0;
     }
   </style>
 </head>
 <body>
-    <h1>Hola, mundo</h1>
-    <p>Esta es mi primera página HTML.</p>
+
+  <!-- Video de fondo -->
+  <video id="video-fondo" autoplay muted loop playsinline>
+    <source src="videofondo.mp4" type="video/mp4">
+    Tu navegador no soporta la reproducción de video.
+  </video>
+
+  <!-- Filtro oscuro (opcional) para legibilidad -->
+  <div class="filtro"></div>
+
+  <!-- Contenido sobre el video -->
+  <div class="contenido">
+    <h1>¡Bienvenido!</h1>
+    <p>Esta es mi página con un video de fondo optimizado.</p>
+  </div>
+
 </body>
 </html>
