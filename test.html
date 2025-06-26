@@ -11,8 +11,8 @@
       margin: 0;
       padding: 0;
       height: 100%;
+      overflow: hidden;
       font-family: sans-serif;
-      overflow-x: hidden;
       background-color: black;
     }
 
@@ -37,6 +37,10 @@
         height: 100vh;
         width: auto;
       }
+
+      .contenido {
+        padding-top: 4vh;
+      }
     }
 
     .filtro {
@@ -54,7 +58,9 @@
       z-index: 1;
       color: white;
       text-align: center;
-      padding: 5vh 2rem;
+      padding-top: 5vh;
+      padding-left: 2rem;
+      padding-right: 2rem;
     }
 
     h1 {
@@ -65,15 +71,6 @@
     p {
       font-size: 1.5rem;
       margin-bottom: 2rem;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    h2 {
-      font-size: 2rem;
-      margin-top: 4rem;
-      margin-bottom: 1rem;
     }
 
     .redes-sociales {
@@ -81,7 +78,6 @@
       flex-direction: column;
       align-items: center;
       gap: 2rem;
-      margin-bottom: 4rem;
     }
 
     .redes-sociales a {
@@ -96,10 +92,17 @@
     }
 
     @media (max-width: 600px) {
-      h1 { font-size: 2rem; }
-      p { font-size: 1.2rem; }
-      h2 { font-size: 1.4rem; }
-      .redes-sociales a { font-size: 4rem; }
+      h1 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1.2rem;
+      }
+
+      .redes-sociales a {
+        font-size: 4rem;
+      }
     }
   </style>
 </head>
@@ -130,14 +133,6 @@
         <i class="fab fa-spotify"></i>
       </a>
     </div>
-
-    <h2>Quiénes somos</h2>
-    <p>Somos una comunidad cristiana comprometida con el amor de Dios, el servicio a las personas y la restauración de las familias.</p>
-
-    <h2>¡Visítanos!</h2>
-    <p>Nos reunimos cada semana en nuestra sede principal en Coelemu.<br>
-       <strong>Dirección:</strong> Calle Ejemplo 123, Coelemu, Chile<br>
-       <strong>Email:</strong> contacto@refugiofamilia.cl</p>
   </div>
 
 </body>
