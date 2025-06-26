@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Somos Un Refugio para la Familia</title>
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
     html, body {
       margin: 0;
@@ -41,36 +41,12 @@
       z-index: -1;
     }
 
-    nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      padding: 1rem;
-      background-color: rgba(0, 0, 0, 0.5);
-      z-index: 10;
-      text-align: center;
-    }
-
-    nav a {
-      color: #ffd700;
-      margin: 0 1rem;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    nav a:hover {
+    .contenido {
+      position: relative;
+      z-index: 1;
       color: white;
-    }
-
-    section {
-      min-height: 100vh;
-      padding: 8rem 2rem 4rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
       text-align: center;
-      color: white;
+      padding: 6rem 2rem 2rem;
     }
 
     h1 {
@@ -80,25 +56,28 @@
 
     h2 {
       font-size: 2rem;
+      margin-top: 3rem;
       margin-bottom: 1rem;
     }
 
     p {
-      font-size: 1.2rem;
+      font-size: 1.3rem;
+      margin: 0 auto 1.5rem;
       max-width: 600px;
-      margin-bottom: 1rem;
     }
 
     .redes-sociales {
+      margin-top: 2rem;
       display: flex;
       flex-direction: column;
+      align-items: center;
       gap: 2rem;
-      margin-top: 2rem;
     }
 
     .redes-sociales a {
       color: white;
       font-size: 5rem;
+      text-decoration: none;
       transition: color 0.3s;
     }
 
@@ -110,9 +89,15 @@
       h1 {
         font-size: 2rem;
       }
+
       h2 {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
       }
+
+      p {
+        font-size: 1.1rem;
+      }
+
       .redes-sociales a {
         font-size: 4rem;
       }
@@ -121,7 +106,6 @@
 </head>
 <body>
 
-  <!-- Video de fondo -->
   <video id="video-fondo" autoplay muted loop playsinline>
     <source src="videofondo.mp4" type="video/mp4">
     Tu navegador no soporta la reproducción de video.
@@ -129,38 +113,25 @@
 
   <div class="filtro"></div>
 
-  <!-- Navegación -->
-  <nav>
-    <a href="#inicio">Inicio</a>
-    <a href="#quienes-somos">Quiénes somos</a>
-    <a href="#visitanos">¡Visítanos!</a>
-  </nav>
-
-  <!-- INICIO -->
-  <section id="inicio">
+  <div class="contenido">
     <h1>¡Bienvenido!</h1>
     <p>Somos Un Refugio para la Familia</p>
+
     <div class="redes-sociales">
       <a href="https://www.instagram.com/unrefugioparalafamilia/" target="_blank"><i class="fab fa-instagram"></i></a>
       <a href="https://www.facebook.com/unrefugioparalafamilia" target="_blank"><i class="fab fa-facebook-square"></i></a>
       <a href="https://wa.me/56975347631" target="_blank"><i class="fab fa-whatsapp"></i></a>
       <a href="https://open.spotify.com/playlist/0kLcnwoaiyIFwWOKgMKVMI?si=690aeeb9cff14123" target="_blank"><i class="fab fa-spotify"></i></a>
     </div>
-  </section>
 
-  <!-- QUIÉNES SOMOS -->
-  <section id="quienes-somos">
-    <h2>Quiénes Somos</h2>
+    <h2>Quiénes somos</h2>
     <p>Somos una comunidad cristiana comprometida con el amor de Dios, el servicio a las personas y la restauración de las familias. Queremos ser un refugio para todos aquellos que buscan fe, propósito y esperanza.</p>
-  </section>
 
-  <!-- ¡VISÍTANOS! -->
-  <section id="visitanos">
     <h2>¡Visítanos!</h2>
     <p>Nos reunimos cada semana en nuestra sede principal en Coelemu. También puedes contactarnos a través de nuestras redes sociales o WhatsApp.</p>
     <p><strong>Dirección:</strong> Calle Ejemplo 123, Coelemu, Chile</p>
     <p><strong>Email:</strong> contacto@refugiofamilia.cl</p>
-  </section>
+  </div>
 
 </body>
 </html>
