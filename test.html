@@ -12,8 +12,8 @@
       padding: 0;
       height: 100%;
       font-family: sans-serif;
-      background: black;
-      overflow-y: auto;
+      overflow-x: hidden;
+      background-color: black;
     }
 
     #video-fondo {
@@ -28,7 +28,6 @@
       z-index: -1;
       object-fit: cover;
       object-position: center top;
-      background-color: black;
     }
 
     @media (max-width: 768px) {
@@ -50,14 +49,11 @@
       z-index: 0;
     }
 
-    .seccion {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
+    .contenido {
+      position: relative;
+      z-index: 1;
       color: white;
+      text-align: center;
       padding: 5vh 2rem;
     }
 
@@ -66,16 +62,18 @@
       margin-bottom: 1rem;
     }
 
-    h2 {
-      font-size: 2rem;
-      margin-top: 3rem;
-      margin-bottom: 1rem;
-    }
-
     p {
       font-size: 1.5rem;
       margin-bottom: 2rem;
       max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-top: 4rem;
+      margin-bottom: 1rem;
     }
 
     .redes-sociales {
@@ -83,6 +81,7 @@
       flex-direction: column;
       align-items: center;
       gap: 2rem;
+      margin-bottom: 4rem;
     }
 
     .redes-sociales a {
@@ -98,8 +97,8 @@
 
     @media (max-width: 600px) {
       h1 { font-size: 2rem; }
-      h2 { font-size: 1.5rem; }
       p { font-size: 1.2rem; }
+      h2 { font-size: 1.4rem; }
       .redes-sociales a { font-size: 4rem; }
     }
   </style>
@@ -113,27 +112,32 @@
 
   <div class="filtro"></div>
 
-  <div class="seccion" id="inicio">
+  <div class="contenido">
     <h1>¡Bienvenido!</h1>
     <p>Somos Un Refugio para la Familia</p>
+
     <div class="redes-sociales">
-      <a href="https://www.instagram.com/unrefugioparalafamilia/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-      <a href="https://www.facebook.com/unrefugioparalafamilia" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-square"></i></a>
-      <a href="https://wa.me/56975347631" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-      <a href="https://open.spotify.com/playlist/0kLcnwoaiyIFwWOKgMKVMI?si=690aeeb9cff14123" target="_blank" aria-label="Spotify"><i class="fab fa-spotify"></i></a>
+      <a href="https://www.instagram.com/unrefugioparalafamilia/" target="_blank" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.facebook.com/unrefugioparalafamilia" target="_blank" aria-label="Facebook">
+        <i class="fab fa-facebook-square"></i>
+      </a>
+      <a href="https://wa.me/56975347631" target="_blank" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+      <a href="https://open.spotify.com/playlist/0kLcnwoaiyIFwWOKgMKVMI?si=690aeeb9cff14123" target="_blank" aria-label="Spotify">
+        <i class="fab fa-spotify"></i>
+      </a>
     </div>
-  </div>
 
-  <div class="seccion" id="quienes-somos">
     <h2>Quiénes somos</h2>
-    <p>Somos una comunidad cristiana comprometida con el amor de Dios, el servicio a las personas y la restauración de las familias. Queremos ser un refugio para todos aquellos que buscan fe, propósito y esperanza.</p>
-  </div>
+    <p>Somos una comunidad cristiana comprometida con el amor de Dios, el servicio a las personas y la restauración de las familias.</p>
 
-  <div class="seccion" id="visitanos">
     <h2>¡Visítanos!</h2>
-    <p>Nos reunimos cada semana en nuestra sede principal en Coelemu. También puedes contactarnos a través de nuestras redes sociales o WhatsApp.</p>
-    <p><strong>Dirección:</strong> Calle Ejemplo 123, Coelemu, Chile</p>
-    <p><strong>Email:</strong> contacto@refugiofamilia.cl</p>
+    <p>Nos reunimos cada semana en nuestra sede principal en Coelemu.<br>
+       <strong>Dirección:</strong> Calle Ejemplo 123, Coelemu, Chile<br>
+       <strong>Email:</strong> contacto@refugiofamilia.cl</p>
   </div>
 
 </body>
