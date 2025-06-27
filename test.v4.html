@@ -45,12 +45,24 @@
       position: fixed;
       top: 0;
       width: 100%;
-      background-color: rgba(0,0,0,0.6);
+      background-color: rgba(0,0,0,0.0); /* transparente para ver el video */
       display: flex;
       justify-content: space-around;
       padding: 1rem 0;
       z-index: 2;
       flex-wrap: wrap;
+    }
+
+    /* Esta capa tapa el contenido detrás de la barra */
+    .barra-navegacion::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.6);
+      z-index: -1;
     }
 
     .barra-navegacion a {
@@ -60,6 +72,8 @@
       padding: 0.5rem 1rem;
       transition: color 0.3s, background-color 0.3s;
       border-radius: 5px;
+      position: relative;
+      z-index: 1;
     }
 
     .barra-navegacion a:hover,
@@ -123,7 +137,7 @@
     }
 
     .ajuste-scroll {
-      scroll-margin-top: 80px; /* altura de la barra */
+      scroll-margin-top: 80px;
     }
 
     @media (max-width: 768px) {
