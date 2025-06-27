@@ -47,21 +47,25 @@
       width: 100%;
       background-color: rgba(0,0,0,0.6);
       display: flex;
-      justify-content: center;
-      gap: 2rem;
-      padding: 1rem;
+      justify-content: space-around;
+      padding: 1rem 0;
       z-index: 2;
+      flex-wrap: wrap;
     }
 
     .barra-navegacion a {
       color: white;
       text-decoration: none;
-      font-size: 1.2rem;
-      transition: color 0.3s;
+      font-size: 1.1rem;
+      padding: 0.5rem 1rem;
+      transition: color 0.3s, background-color 0.3s;
+      border-radius: 5px;
     }
 
-    .barra-navegacion a:hover {
-      color: #ffd700;
+    .barra-navegacion a:hover,
+    .barra-navegacion a.activo {
+      background-color: #ffd700;
+      color: black;
     }
 
     .contenido {
@@ -141,8 +145,7 @@
       .redes-sociales a {
         font-size: 4rem;
       }
-
-         }
+    }
   </style>
 </head>
 <body>
@@ -193,6 +196,26 @@
       Miércoles 20:00 PM – Estudio bíblico
     </p>
   </section>
+
+  <script>
+    const enlaces = document.querySelectorAll('.barra-navegacion a');
+    const secciones = document.querySelectorAll('section, .contenido');
+
+    window.addEventListener('scroll', () => {
+      let scrollPos = window.scrollY + window.innerHeight / 3;
+
+      secciones.forEach(seccion => {
+        if (seccion.offsetTop <= scrollPos && (seccion.offsetTop + seccion.offsetHeight) > scrollPos) {
+          enlaces.forEach(enlace => {
+            enlace.classList.remove('activo');
+            if (enlace.getAttribute('href').substring(1) === seccion.id) {
+              enlace.classList.add('activo');
+            }
+          });
+        }
+      });
+    });
+  </script>
 
 </body>
 </html>
