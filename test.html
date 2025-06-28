@@ -27,7 +27,7 @@
       height: auto;
       z-index: -1;
       object-fit: cover;
-      object-position: center top;
+      object-position: center 15%;
       background-color: black;
     }
 
@@ -45,11 +45,13 @@
       position: fixed;
       top: 0;
       width: 100%;
-      background-color: rgba(0,0,0,0.6);
+      background-color: rgba(0,0,0,0.3);
+      backdrop-filter: blur(10px) brightness(60%);
+      -webkit-backdrop-filter: blur(10px) brightness(30%);
       display: flex;
       justify-content: space-around;
       padding: 1rem 0;
-      z-index: 2;
+      z-index: 999;
       flex-wrap: wrap;
     }
 
@@ -60,6 +62,8 @@
       padding: 0.5rem 1rem;
       transition: color 0.3s, background-color 0.3s;
       border-radius: 5px;
+      position: relative;
+      z-index: 1;
     }
 
     .barra-navegacion a:hover,
@@ -73,8 +77,7 @@
       z-index: 1;
       color: white;
       text-align: center;
-      margin-top: 70px;
-      padding-top: 10vh;
+      padding-top: 15vh;
       padding-left: 2rem;
       padding-right: 2rem;
       min-height: 100vh;
@@ -121,6 +124,10 @@
     .seccion h2 {
       font-size: 2.5rem;
       margin-bottom: 1rem;
+    }
+
+    .ajuste-scroll {
+      scroll-margin-top: 50px;
     }
 
     @media (max-width: 768px) {
@@ -184,18 +191,34 @@
     </div>
   </div>
 
-  <section id="quienes-somos" class="seccion">
+  <section id="quienes-somos" class="seccion ajuste-scroll">
     <h2>¿Quiénes somos?</h2>
-    <p>Somos una comunidad cristiana comprometida con restaurar familias a través del amor de Dios.</p>
+    <p>
+      Somos Un Refugio para la Familia, una comunidad cristiana que forma parte de la Iglesia Metodista Libre, con presencia en Chile y en todo el mundo.
+    </p>
+    <p>
+      Nos caracteriza una fe viva, centrada en Jesucristo y expresada en el amor a Dios, el amor por las personas y el compromiso de hacer discípulos. Como iglesia, creemos que “somos personas de Dios, acercando a Dios a las personas”.
+    </p>
+    <p>
+      Aquí encontrarás un espacio para crecer, servir y vivir una espiritualidad auténtica en comunidad. Vivimos nuestra fe con alegría, fraternidad y un profundo deseo de reflejar el corazón de Cristo en nuestro entorno.
+    </p>
   </section>
 
-  <section id="visitanos" class="seccion">
+  <section id="visitanos" class="seccion ajuste-scroll">
     <h2>Visítanos</h2>
-    <p><strong>Dirección:</strong> Calle Ficticia 123, Coelemu, Chile</p>
-    <p><strong>Horario de Reuniones:</strong><br>
-      Domingo 10:30 AM – Culto general<br>
-      Miércoles 20:00 PM – Estudio bíblico
+    <p>¡Nos encantaría conocerte!</p>
+    <p>Estamos ubicados en Pedro León Gallo 384, Coelemu.</p>
+    <p><strong>Horarios de reunión:</strong><br>
+      Jueves · 20:00 hrs<br>
+      Domingo · 18:00 hrs
     </p>
+    <p>Ven tal como eres. Siempre hay un lugar para ti en Un Refugio para la Familia.</p>
+    <div style="margin-top:2rem;">
+      <h3>Encuéntranos en Google Maps:</h3>
+      <a href="https://maps.app.goo.gl/kbcB3rab971m6bWe7" target="_blank" aria-label="Google Maps" style="font-size:3rem; color:white; text-decoration:none;">
+        <i class="fas fa-map-marked-alt"></i>
+      </a>
+    </div>
   </section>
 
   <script>
