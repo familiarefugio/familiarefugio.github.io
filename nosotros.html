@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Somos Un Refugio para la Familia</title>
+  <title>Nosotros - Un Refugio para la Familia</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
@@ -49,7 +49,8 @@
       backdrop-filter: blur(8px) brightness(60%);
       -webkit-backdrop-filter: blur(8px) brightness(60%);
       display: flex;
-      justify-content: space-around;
+      justify-content: center;
+      gap: 2rem;
       padding: 1rem 0;
       z-index: 999;
       flex-wrap: wrap;
@@ -72,45 +73,6 @@
       color: black;
     }
 
-    .contenido {
-      position: relative;
-      z-index: 1;
-      color: white;
-      text-align: center;
-      padding-top: 15vh;
-      padding-left: 2rem;
-      padding-right: 2rem;
-      min-height: 100vh;
-    }
-
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-    }
-
-    p {
-      font-size: 1.5rem;
-      margin-bottom: 2rem;
-    }
-
-    .redes-sociales {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 2rem;
-    }
-
-    .redes-sociales a {
-      color: white;
-      font-size: 5rem;
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-
-    .redes-sociales a:hover {
-      color: #ffd700;
-    }
-
     .seccion {
       position: relative;
       z-index: 1;
@@ -126,8 +88,23 @@
       margin-bottom: 1rem;
     }
 
+    .seccion p {
+      font-size: 1.3rem;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 1rem auto;
+    }
+
     .ajuste-scroll {
-      scroll-margin-top: 50px;
+      scroll-margin-top: 80px;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.5rem;
+      padding: 2rem 1rem;
+      background-color: rgba(0,0,0,0.5);
+      color: white;
     }
 
     @media (max-width: 768px) {
@@ -138,24 +115,12 @@
         width: auto;
       }
 
-      .contenido {
-        padding-top: 12vh;
-      }
-
-      h1 {
-        font-size: 2rem;
-      }
-
-      p {
-        font-size: 1.2rem;
-      }
-
-      .redes-sociales a {
-        font-size: 4rem;
-      }
-
       .seccion h2 {
         font-size: 2rem;
+      }
+
+      .seccion p {
+        font-size: 1.1rem;
       }
     }
   </style>
@@ -170,70 +135,59 @@
   <div class="filtro"></div>
 
   <nav class="barra-navegacion">
-    <a href="#inicio">Inicio</a>
-    <a href="#quienes-somos">Quiénes somos</a>
-    <a href="#visitanos">Visítanos</a>
+    <a href="#nuestra-historia">Nuestra historia</a>
+    <a href="#nuestros-pastores">Nuestros pastores</a>
+    <a href="#nuestra-creencia">Nuestra creencia</a>
   </nav>
 
-  <div class="contenido" id="inicio">
-    <h1>¡Bienvenido!</h1>
-    <p>Somos Un Refugio para la Familia</p>
-
-    <div class="redes-sociales">
-      <a href="https://www.instagram.com/unrefugioparalafamilia/" target="_blank" aria-label="Instagram">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a href="https://www.facebook.com/unrefugioparalafamilia" target="_blank" aria-label="Facebook">
-        <i class="fab fa-facebook-square"></i>
-      </a>
-      <a href="https://wa.me/56975347631" target="_blank" aria-label="WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-      </a>
-      <a href="https://open.spotify.com/playlist/0kLcnwoaiyIFwWOKgMKVMI?si=690aeeb9cff14123" target="_blank" aria-label="Spotify">
-        <i class="fab fa-spotify"></i>
-      </a>
-    </div>
-  </div>
-
-  <section id="quienes-somos" class="seccion ajuste-scroll">
-    <h2>¿Quiénes somos?</h2>
+  <!-- SECCIÓN: NUESTRA HISTORIA -->
+  <section id="nuestra-historia" class="seccion ajuste-scroll">
+    <h2>Nuestra Historia</h2>
     <p>
-      Somos Un Refugio para la Familia, una comunidad cristiana que forma parte de la Iglesia Metodista Libre, con presencia en Chile y en todo el mundo.
+      "Un Refugio para la Familia" nació con el anhelo de ser un lugar de consuelo, guía y transformación para las familias de Coelemu.
     </p>
     <p>
-      Nos caracteriza una fe viva, centrada en Jesucristo y expresada en el amor a Dios, el amor por las personas y el compromiso de hacer discípulos. Como iglesia, creemos que “somos personas de Dios, acercando a Dios a las personas”.
-    </p>
-    <p>
-      Aquí encontrarás un espacio para crecer, servir y vivir una espiritualidad auténtica en comunidad. Vivimos nuestra fe con alegría, fraternidad y un profundo deseo de reflejar el corazón de Cristo en nuestro entorno.
+      Comenzamos como un pequeño grupo de oración y, con el paso del tiempo, Dios fue sumando personas, sueños y propósitos. Hemos visto su fidelidad en cada etapa. Hoy seguimos creciendo, con el mismo deseo de reflejar el amor de Cristo y ser una iglesia con puertas abiertas para todos.
     </p>
   </section>
 
-  <section id="visitanos" class="seccion ajuste-scroll">
-    <h2>Visítanos</h2>
-    <p>¡Nos encantaría conocerte!</p>
-    <p>Estamos ubicados en Pedro León Gallo 384, Coelemu.</p>
-    <p><strong>Horarios de reunión:</strong><br>
-      Jueves · 20:00 hrs<br>
-      Domingo · 18:00 hrs
+  <!-- SECCIÓN: NUESTROS PASTORES -->
+  <section id="nuestros-pastores" class="seccion ajuste-scroll">
+    <h2>Nuestros Pastores</h2>
+    <p>
+      El liderazgo de nuestra iglesia está compuesto por pastores comprometidos con Dios y con el bienestar espiritual de cada persona.
     </p>
-    <p>Ven tal como eres. Siempre hay un lugar para ti en Un Refugio para la Familia.</p>
-    <div style="margin-top:2rem; text-align:center;">
-      <h3>Encuéntranos en Google Maps</h3>
-      <a href="https://maps.app.goo.gl/kbcB3rab971m6bWe7" target="_blank" aria-label="Google Maps" style="font-size:3rem; color:white; text-decoration:none; display:inline-block; cursor:pointer;">
-        <i class="fas fa-map-marked-alt"></i>
-      </a>
-      <p style="margin-top:0.5rem; font-size:1rem;">Pincha el ícono para abrir el mapa</p>
-    </div>
+    <p>
+      <strong>Pastor Principal:</strong> Juan Pérez<br>
+      <strong>Pastora Adjunta:</strong> María González
+    </p>
+    <p>
+      Sirven con humildad, dedicación y pasión por hacer discípulos de Jesucristo.
+    </p>
   </section>
 
-  <footer class="seccion" style="text-align:center; font-size:0.5rem; min-height:auto; padding:2rem;">
-    <p>© 2025 Un Refugio para la Familia</p>
+  <!-- SECCIÓN: NUESTRA CREENCIA -->
+  <section id="nuestra-creencia" class="seccion ajuste-scroll">
+    <h2>Nuestra Creencia</h2>
+    <p>
+      Creemos en un Dios trino: Padre, Hijo y Espíritu Santo. Jesucristo es nuestro Salvador, Señor y ejemplo perfecto de amor y verdad.
+    </p>
+    <p>
+      Afirmamos la Biblia como la Palabra inspirada de Dios, nuestra autoridad suprema para la fe y la práctica. Toda persona está invitada a una relación personal con Dios por gracia, mediante la fe en Cristo.
+    </p>
+    <p>
+      Como Iglesia Metodista Libre, sostenemos una fe activa que busca la transformación del carácter, la santidad en la vida diaria y la justicia en la sociedad.
+    </p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Un Refugio para la Familia</p>
     <p>Personas de Dios, acercando a Dios a las personas.</p>
   </footer>
 
   <script>
     const enlaces = document.querySelectorAll('.barra-navegacion a');
-    const secciones = document.querySelectorAll('section, .contenido');
+    const secciones = document.querySelectorAll('section');
 
     window.addEventListener('scroll', () => {
       let scrollPos = window.scrollY + window.innerHeight / 3;
