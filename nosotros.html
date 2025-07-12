@@ -1,85 +1,255 @@
-<!-- nosotros.html -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Quiénes Somos - Un Refugio para la Familia</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Somos Un Refugio para la Familia</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
-    * {
+    html, body {
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-    }
-
-    body, html {
       height: 100%;
-      font-family: Arial, sans-serif;
-      color: white;
+      overflow-x: hidden;
+      font-family: sans-serif;
+      scroll-behavior: smooth;
     }
 
-    #background-video {
+    #video-fondo {
       position: fixed;
-      right: 0;
-      bottom: 0;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       min-width: 100%;
       min-height: 100%;
+      width: auto;
+      height: auto;
       z-index: -1;
       object-fit: cover;
+      object-position: center 15%;
+      background-color: black;
     }
 
-    .content {
+    .filtro {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+      z-index: 0;
+    }
+
+    .barra-navegacion {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: rgba(0,0,0,0.2);
+      backdrop-filter: blur(8px) brightness(60%);
+      -webkit-backdrop-filter: blur(8px) brightness(60%);
+      display: flex;
+      justify-content: space-around;
+      padding: 1rem 0;
+      z-index: 999;
+      flex-wrap: wrap;
+    }
+
+    .barra-navegacion a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.1rem;
+      padding: 0.5rem 1rem;
+      transition: color 0.3s, background-color 0.3s;
+      border-radius: 5px;
       position: relative;
       z-index: 1;
-      padding: 2rem;
-      max-width: 800px;
-      margin: 0 auto;
+    }
+
+    .barra-navegacion a:hover,
+    .barra-navegacion a.activo {
+      background-color: #ffd700;
+      color: black;
+    }
+
+    .contenido {
+      position: relative;
+      z-index: 1;
+      color: white;
       text-align: center;
+      padding-top: 15vh;
+      padding-left: 2rem;
+      padding-right: 2rem;
+      min-height: 100vh;
     }
 
     h1 {
-      font-size: 2rem;
+      font-size: 3rem;
       margin-bottom: 1rem;
     }
 
     p {
-      font-size: 1rem;
-      line-height: 1.6;
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .redes-sociales {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .redes-sociales a {
+      color: white;
+      font-size: 5rem;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .redes-sociales a:hover {
+      color: #ffd700;
+    }
+
+    .seccion {
+      position: relative;
+      z-index: 1;
+      color: white;
+      text-align: center;
+      padding: 12vh 2rem;
+      min-height: 100vh;
+      background-color: rgba(0,0,0,0.5);
+    }
+
+    .seccion h2 {
+      font-size: 2.5rem;
       margin-bottom: 1rem;
     }
 
-    a {
-      color: #00d4ff;
-      text-decoration: none;
+    .ajuste-scroll {
+      scroll-margin-top: 50px;
     }
 
-    footer {
-      text-align: center;
-      font-size: 0.5rem;
-      padding: 1rem 0;
+    @media (max-width: 768px) {
+      #video-fondo {
+        object-fit: contain;
+        object-position: center top;
+        height: 100vh;
+        width: auto;
+      }
+
+      .contenido {
+        padding-top: 12vh;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1.2rem;
+      }
+
+      .redes-sociales a {
+        font-size: 4rem;
+      }
+
+      .seccion h2 {
+        font-size: 2rem;
+      }
     }
   </style>
 </head>
 <body>
 
-  <video autoplay muted loop id="background-video">
-    <source src="videofondo.mp4" type="video/mp4">
-    Tu navegador no soporta videos en HTML5.
+  <video id="video-fondo" autoplay muted loop playsinline>
+    <source src="videofondo.mp4" type="video/mp4" />
+    Tu navegador no soporta la reproducción de video.
   </video>
 
-  <div class="content">
-    <h1>Quiénes Somos</h1>
-    <p>Somos parte de la Iglesia Metodista Libre, presente tanto en Chile como a nivel mundial. Nuestra congregación local, "Un Refugio para la Familia", existe para glorificar a Dios y servir a las personas.</p>
-    <p>Nuestra identidad se resume en frases que nos definen: <strong>"Amamos a Dios, amamos a las personas, hacemos discípulos"</strong> y <strong>"Somos personas de Dios, acercando a Dios a las personas"</strong>.</p>
-    <p>Nos reunimos en Pedro León Gallo 384, Coelemu. Los horarios de nuestras reuniones son:</p>
-    <p><strong>Jueves</strong> a las 20:00 hrs<br><strong>Domingos</strong> a las 18:00 hrs</p>
-    <p><a href="https://maps.app.goo.gl/kbcB3rab971m6bWe7" target="_blank">Ver ubicación en Google Maps</a></p>
-    <p><a href="index.html">← Volver al inicio</a></p>
+  <div class="filtro"></div>
+
+  <nav class="barra-navegacion">
+    <a href="#inicio">Inicio</a>
+    <a href="#quienes-somos">Quiénes somos</a>
+    <a href="#visitanos">Visítanos</a>
+  </nav>
+
+  <div class="contenido" id="inicio">
+    <h1>¡Bienvenido!</h1>
+    <p>Somos Un Refugio para la Familia</p>
+
+    <div class="redes-sociales">
+      <a href="https://www.instagram.com/unrefugioparalafamilia/" target="_blank" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.facebook.com/unrefugioparalafamilia" target="_blank" aria-label="Facebook">
+        <i class="fab fa-facebook-square"></i>
+      </a>
+      <a href="https://wa.me/56975347631" target="_blank" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+      <a href="https://open.spotify.com/playlist/0kLcnwoaiyIFwWOKgMKVMI?si=690aeeb9cff14123" target="_blank" aria-label="Spotify">
+        <i class="fab fa-spotify"></i>
+      </a>
+    </div>
   </div>
 
-  <footer>
-    <p>&copy; 2025 Un Refugio para la Familia</p>
+  <section id="quienes-somos" class="seccion ajuste-scroll">
+    <h2>¿Quiénes somos?</h2>
+    <p>
+      Somos Un Refugio para la Familia, una comunidad cristiana que forma parte de la Iglesia Metodista Libre, con presencia en Chile y en todo el mundo.
+    </p>
+    <p>
+      Nos caracteriza una fe viva, centrada en Jesucristo y expresada en el amor a Dios, el amor por las personas y el compromiso de hacer discípulos. Como iglesia, creemos que “somos personas de Dios, acercando a Dios a las personas”.
+    </p>
+    <p>
+      Aquí encontrarás un espacio para crecer, servir y vivir una espiritualidad auténtica en comunidad. Vivimos nuestra fe con alegría, fraternidad y un profundo deseo de reflejar el corazón de Cristo en nuestro entorno.
+    </p>
+  </section>
+
+  <section id="visitanos" class="seccion ajuste-scroll">
+    <h2>Visítanos</h2>
+    <p>¡Nos encantaría conocerte!</p>
+    <p>Estamos ubicados en Pedro León Gallo 384, Coelemu.</p>
+    <p><strong>Horarios de reunión:</strong><br>
+      Jueves · 20:00 hrs<br>
+      Domingo · 18:00 hrs
+    </p>
+    <p>Ven tal como eres. Siempre hay un lugar para ti en Un Refugio para la Familia.</p>
+    <div style="margin-top:2rem; text-align:center;">
+      <h3>Encuéntranos en Google Maps</h3>
+      <a href="https://maps.app.goo.gl/kbcB3rab971m6bWe7" target="_blank" aria-label="Google Maps" style="font-size:3rem; color:white; text-decoration:none; display:inline-block; cursor:pointer;">
+        <i class="fas fa-map-marked-alt"></i>
+      </a>
+      <p style="margin-top:0.5rem; font-size:1rem;">Pincha el ícono para abrir el mapa</p>
+    </div>
+  </section>
+
+  <footer class="seccion" style="text-align:center; font-size:0.5rem; min-height:auto; padding:2rem;">
+    <p>© 2025 Un Refugio para la Familia</p>
+    <p>Personas de Dios, acercando a Dios a las personas.</p>
   </footer>
+
+  <script>
+    const enlaces = document.querySelectorAll('.barra-navegacion a');
+    const secciones = document.querySelectorAll('section, .contenido');
+
+    window.addEventListener('scroll', () => {
+      let scrollPos = window.scrollY + window.innerHeight / 3;
+
+      secciones.forEach(seccion => {
+        if (seccion.offsetTop <= scrollPos && (seccion.offsetTop + seccion.offsetHeight) > scrollPos) {
+          enlaces.forEach(enlace => {
+            enlace.classList.remove('activo');
+            if (enlace.getAttribute('href').substring(1) === seccion.id) {
+              enlace.classList.add('activo');
+            }
+          });
+        }
+      });
+    });
+  </script>
 
 </body>
 </html>
