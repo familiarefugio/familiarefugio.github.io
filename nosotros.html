@@ -2,57 +2,83 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Quiénes Somos - Un Refugio para la Familia</title>
   <style>
-    body {
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
       font-family: Arial, sans-serif;
-      background-color: #111;
       color: white;
-      line-height: 1.6;
+    }
+
+    #background-video {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+      z-index: -1;
+      object-fit: cover;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
       padding: 2rem;
-    }
-    header, footer {
+      max-width: 800px;
+      margin: 0 auto;
       text-align: center;
-      margin-bottom: 2rem;
     }
+
     h1 {
       font-size: 2rem;
       margin-bottom: 1rem;
     }
+
     p {
-      max-width: 800px;
-      margin: 0 auto 1.5rem;
       font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 1rem;
     }
+
     a {
       color: #00d4ff;
       text-decoration: none;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.5rem;
+      padding: 1rem 0;
     }
   </style>
 </head>
 <body>
 
-  <header>
+  <video autoplay muted loop id="background-video">
+    <source src="videofondo.mp4" type="video/mp4">
+    Tu navegador no soporta videos en HTML5.
+  </video>
+
+  <div class="content">
     <h1>Quiénes Somos</h1>
-  </header>
-
-  <main>
-    <p>Somos parte de la Iglesia Metodista Libre, presente tanto en Chile como en el mundo. Nuestra comunidad local, llamada "Un Refugio para la Familia", existe para glorificar a Dios y servir a las personas.</p>
-
-    <p>Nuestra misión se resume en frases que nos representan: <strong>"Amamos a Dios, amamos a las personas, hacemos discípulos"</strong> y <strong>"Somos personas de Dios, acercando a Dios a las personas"</strong>.</p>
-
-    <p>Nos reunimos cada jueves a las 20:00 hrs y domingos a las 18:00 hrs en Pedro León Gallo 384, Coelemu.</p>
-
-    <p>Te invitamos a conocernos y a ser parte de esta gran familia de fe.</p>
-
-    <p><a href="index.html">← Volver a la página principal</a></p>
-  </main>
+    <p>Somos parte de la Iglesia Metodista Libre, presente tanto en Chile como a nivel mundial. Nuestra congregación local, "Un Refugio para la Familia", existe para glorificar a Dios y servir a las personas.</p>
+    <p>Nuestra identidad se resume en frases que nos definen: <strong>"Amamos a Dios, amamos a las personas, hacemos discípulos"</strong> y <strong>"Somos personas de Dios, acercando a Dios a las personas"</strong>.</p>
+    <p>Nos reunimos en Pedro León Gallo 384, Coelemu. Los horarios de nuestras reuniones son:</p>
+    <p><strong>Jueves</strong> a las 20:00 hrs<br><strong>Domingos</strong> a las 18:00 hrs</p>
+    <p><a href="https://maps.app.goo.gl/kbcB3rab971m6bWe7" target="_blank">Ver ubicación en Google Maps</a></p>
+    <p><a href="index.html">← Volver al inicio</a></p>
+  </div>
 
   <footer>
-    <p style="font-size: 0.8rem;">&copy; 2025 Un Refugio para la Familia</p>
+    <p>&copy; 2025 Un Refugio para la Familia</p>
   </footer>
 
 </body>
