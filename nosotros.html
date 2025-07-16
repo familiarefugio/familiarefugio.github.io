@@ -108,11 +108,14 @@
     }
 
     @media (max-width: 768px) {
-      #video-fondo {
-        object-fit: contain;
-        object-position: center top;
-        height: 100vh;
-        width: auto;
+      .barra-navegacion {
+        gap: 0.5rem;
+        padding: 0.5rem 0;
+      }
+
+      .barra-navegacion a {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.6rem;
       }
 
       .seccion h2 {
@@ -121,6 +124,13 @@
 
       .seccion p {
         font-size: 1.1rem;
+      }
+
+      #video-fondo {
+        object-fit: contain;
+        object-position: center top;
+        height: 100vh;
+        width: auto;
       }
     }
   </style>
@@ -136,13 +146,13 @@
 
   <nav class="barra-navegacion">
     <a href="index.html">Inicio</a>
-    <a href="#nuestra-historia">Historia</a>
-    <a href="#nuestros-pastores">Pastores</a>
-    <a href="#nuestra-creencia">Creencias</a>
+    <a href="#historia">Historia</a>
+    <a href="#pastores">Pastores</a>
+    <a href="#creencias">Creencias</a>
   </nav>
 
-  <!-- SECCIÓN: NUESTRA HISTORIA -->
-  <section id="nuestra-historia" class="seccion ajuste-scroll">
+  <!-- SECCIÓN: HISTORIA -->
+  <section id="historia" class="seccion ajuste-scroll">
     <h2>Nuestra Historia</h2>
     <p>
       "Un Refugio para la Familia" nació con el anhelo de ser un lugar de consuelo, guía y transformación para las familias de Coelemu.
@@ -152,23 +162,23 @@
     </p>
   </section>
 
-  <!-- SECCIÓN: NUESTROS PASTORES -->
-  <section id="nuestros-pastores" class="seccion ajuste-scroll">
+  <!-- SECCIÓN: PASTORES -->
+  <section id="pastores" class="seccion ajuste-scroll">
     <h2>Nuestros Pastores</h2>
-    <img src="pastores.png" alt="Nuestros pastores" style="max-width:50%; height:auto; border-radius:10px; margin:1rem auto 1.5rem auto; display:block;">
     <p>
-      Nuestros pastores son Patricio Alvial Proboste y Yalili Leiva S. son parte de la IML mundial. Llevan 30 años de ministerio sirviendo al Señor, junto a sus hijos, Diego y Deby.  
+      El liderazgo de nuestra iglesia está compuesto por pastores comprometidos con Dios y con el bienestar espiritual de cada persona.
     </p>
     <p>
-      Su ministerio tiene un enfoque familiar y creen que todos los integrantes de las familias pueden conocer a Jesucristo como Señor y salvador. Promueven la restauración y crecimiento espiritual de cada creyente.
+      <strong>Pastor Principal:</strong> Juan Pérez<br>
+      <strong>Pastora Adjunta:</strong> María González
     </p>
     <p>
       Sirven con humildad, dedicación y pasión por hacer discípulos de Jesucristo.
     </p>
   </section>
 
-  <!-- SECCIÓN: NUESTRA CREENCIA -->
-  <section id="nuestra-creencia" class="seccion ajuste-scroll">
+  <!-- SECCIÓN: CREENCIAS -->
+  <section id="creencias" class="seccion ajuste-scroll">
     <h2>Nuestra Creencia</h2>
     <p>
       Creemos en un Dios trino: Padre, Hijo y Espíritu Santo. Jesucristo es nuestro Salvador, Señor y ejemplo perfecto de amor y verdad.
