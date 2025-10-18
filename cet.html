@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cielo en la Tierra | CET</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #fff;
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+
+    /* Fondo de video */
+    video#bg-video {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    /* Barra de navegación */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.65);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px 0;
+      z-index: 10;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 6px 14px;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #00bcd4;
+    }
+
+    header {
+      text-align: center;
+      margin-top: 100px;
+    }
+
+    header img {
+      width: 220px;
+      max-width: 80%;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 50px auto;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 30px;
+      border-radius: 15px;
+      line-height: 1.7;
+      text-align: justify;
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #00bcd4;
+    }
+
+    @media (max-width: 768px) {
+      nav a {
+        margin: 4px 8px;
+        font-size: 14px;
+      }
+
+      section {
+        margin: 30px 15px;
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Fondo de video -->
+  <video autoplay muted loop id="bg-video">
+    <source src="videofondo.mp4" type="video/mp4">
+    Tu navegador no soporta video en HTML5.
+  </video>
+
+  <!-- Barra de navegación -->
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="nosotros.html">Nosotros</a>
+    <a href="cet.html">CET</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <!-- Encabezado -->
+  <header>
+    <img src="cetlogo.png" alt="Logo Cielo en la Tierra">
+    <h1>Cielo en la Tierra</h1>
+  </header>
+
+  <!-- Contenido principal -->
+  <section>
+    <h2>¿Qué es Cielo en la Tierra?</h2>
+    <p>
+      <strong>Cielo en la Tierra (CET)</strong> es un tiempo de adoración y proclamación pública de la fe cristiana, 
+      realizado en espacios abiertos como la plaza de armas de nuestra comuna. 
+      Es una expresión de la iglesia que sale de sus cuatro paredes para cumplir el llamado de Jesús: 
+      <em>“Vayan y hagan discípulos en todas las naciones”</em> (Mateo 28:19).
+    </p>
+
+    <p>
+      A través de la música, la oración y la predicación, buscamos crear un ambiente donde la presencia de Dios 
+      se manifieste de manera tangible en medio de nuestra ciudad. Este espacio no es un evento más, 
+      sino una oportunidad para conectar el <strong>Cielo</strong> con la <strong>Tierra</strong>, 
+      haciendo visible el Reino de Dios entre nosotros.
+    </p>
+
+    <h2>El significado del Cielo y la Tierra</h2>
+    <p>
+      En la Biblia, el <strong>Cielo</strong> representa la presencia, autoridad y gloria de Dios, 
+      mientras que la <strong>Tierra</strong> simboliza el lugar donde vivimos, trabajamos y compartimos Su amor. 
+      Cuando adoramos, cuando proclamamos Su palabra, creamos una conexión espiritual entre ambos: 
+      el Cielo toca la Tierra, y la Tierra responde en adoración al Creador.
+    </p>
+
+    <p>
+      <strong>Cielo en la Tierra</strong> es, por tanto, una invitación a vivir esa realidad ahora —no como algo lejano— 
+      sino como una verdad presente que se manifiesta cuando el pueblo de Dios se une en alabanza y obediencia.
+    </p>
+  </section>
+
+  <!-- (opcional) Pie de página -->
+  <footer style="text-align:center; margin-bottom:30px; opacity:0.8;">
+    <p>© 2025 Iglesia Metodista Libre de Coelemu | Cielo en la Tierra</p>
+  </footer>
+
+</body>
+</html>
