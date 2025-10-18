@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cielo en la Tierra - Un Refugio para la Familia</title>
+  <title>Cielo en la Tierra · Un Refugio para la Familia</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
@@ -64,13 +64,12 @@
       border-radius: 5px;
     }
 
-    .barra-navegacion a:hover,
-    .barra-navegacion a.activo {
+    .barra-navegacion a:hover {
       background-color: #ffd700;
       color: black;
     }
 
-    .contenido, .seccion {
+    .contenido {
       position: relative;
       z-index: 1;
       color: white;
@@ -81,40 +80,62 @@
       min-height: 100vh;
     }
 
-    .seccion {
-      background-color: rgba(0,0,0,0.5);
-      padding: 12vh 2rem;
-    }
-
     h1, h2 {
-      margin-bottom: 1rem;
-    }
-
-    h1 {
-      font-size: 3rem;
-    }
-
-    h2 {
       font-size: 2.5rem;
+      margin-bottom: 1rem;
     }
 
     p {
       font-size: 1.3rem;
-      margin-bottom: 1rem;
       line-height: 1.6;
+      margin-bottom: 1.5rem;
     }
 
-    .logo-cet {
-      width: 250px;
-      max-width: 80%;
-      margin: 2rem auto;
-      display: block;
+    .logo {
+      max-width: 300px;
+      width: 80%;
+      margin-bottom: 2rem;
+    }
+
+    .seccion {
+      position: relative;
+      z-index: 1;
+      color: white;
+      text-align: center;
+      padding: 12vh 2rem;
+      min-height: 100vh;
+      background-color: rgba(0,0,0,0.5);
+    }
+
+    .redes {
+      margin-top: 2rem;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    .redes a {
+      color: white;
+      font-size: 3rem;
+      transition: color 0.3s;
+    }
+
+    .redes a:hover {
+      color: #ffd700;
+    }
+
+    footer {
+      text-align: center;
+      color: white;
+      background-color: rgba(0,0,0,0.6);
+      padding: 2rem;
+      font-size: 0.9rem;
     }
 
     @media (max-width: 768px) {
-      h1 { font-size: 2rem; }
-      h2 { font-size: 2rem; }
+      h1, h2 { font-size: 2rem; }
       p { font-size: 1.1rem; }
+      .redes a { font-size: 2.5rem; }
     }
   </style>
 </head>
@@ -128,35 +149,52 @@
   <div class="filtro"></div>
 
   <nav class="barra-navegacion">
-    <a href="index.html#inicio">Inicio</a>
-    <a href="index.html#quienes-somos">Quiénes somos</a>
-    <a href="index.html#visitanos">Visítanos</a>
-    <a href="#cet">Cielo en la Tierra</a>
+    <a href="index.html">Inicio</a>
+    <a href="#cet">CET</a>
+    <a href="#octubre">31 de Octubre</a>
   </nav>
 
-  <section id="cet" class="seccion">
-    <img src="cetlogo.png" alt="Logo Cielo en la Tierra" class="logo-cet" />
-
-    <h2>Cielo en la Tierra</h2>
-
+  <section id="cet" class="contenido">
+    <img src="cetlogo.png" alt="Logo Cielo en la Tierra" class="logo">
+    <h1>Cielo en la Tierra</h1>
     <p>
-      <strong>Cielo en la Tierra</strong> es un tiempo especial de adoración en espacios públicos, como la plaza de armas de nuestra comuna, donde buscamos conectar el cielo con la tierra a través de la alabanza, la oración y la palabra.
+      <strong>Cielo en la Tierra (CET)</strong> es un tiempo de adoración en espacio público,
+      generalmente realizado en la plaza de armas de nuestra comuna. Es un llamado a salir de nuestras
+      cuatro paredes y cumplir la tarea que nos fue encomendada: ir y hacer discípulos.
     </p>
-
     <p>
-      Es un llamado a salir de nuestras cuatro paredes, llevando la presencia de Dios a cada rincón, y recordando que somos llamados a <strong>ir y hacer discípulos</strong>, cumpliendo la misión encomendada por Jesús.
-    </p>
-
-    <p>
-      En estos encuentros, proclamamos que el Reino de Dios está presente aquí y ahora, y que cuando adoramos, el cielo y la tierra se encuentran: lo divino toca lo humano, y la gloria de Dios transforma nuestro entorno.
-    </p>
-
-    <p>
-      “Venga tu reino, hágase tu voluntad, así en la tierra como en el cielo.” – Mateo 6:10
+      En <em>Cielo en la Tierra</em> celebramos la conexión divina entre el cielo y la tierra a través de
+      la adoración y la proclamación de la Palabra. Creemos que cuando el pueblo de Dios adora en unidad,
+      su presencia transforma los lugares y las vidas a su alrededor.
     </p>
   </section>
 
-  <footer class="seccion" style="text-align:center; font-size:0.8rem; min-height:auto; padding:2rem;">
+  <section id="octubre" class="seccion">
+    <h2>CET · 31 de Octubre</h2>
+    <p>
+      Cada 31 de octubre celebramos en Chile el <strong>Día de las Iglesias Evangélicas y Protestantes</strong>,
+      recordando la <strong>Reforma Protestante</strong> iniciada por Martín Lutero en el siglo XVI.  
+    </p>
+    <p>
+      En este día, salimos a las calles para proclamar a Jesús con gozo y libertad, declarando que su luz
+      resplandece sobre nuestra nación. <em>Cielo en la Tierra</em> es nuestra manera de expresar
+      públicamente esa fe viva, llevando la adoración fuera del templo y compartiendo el mensaje de salvación
+      con todos.
+    </p>
+    <p><strong>¿Quieres cantar con todo tu corazón y con todas tus fuerzas?</strong><br>
+      Escucha la playlist preparada especialmente para ese día:
+    </p>
+    <div class="redes">
+      <a href="https://open.spotify.com/playlist/6ajDeduX5RGQHvtuw0UvLK?si=b3cfdae003444ac9" target="_blank" aria-label="Spotify">
+        <i class="fab fa-spotify"></i>
+      </a>
+      <a href="https://www.youtube.com/watch?v=bhPdS_ZUKg8&list=PL4bEyLE558GadQrq2tSec1PA3268JrPDx" target="_blank" aria-label="YouTube">
+        <i class="fab fa-youtube"></i>
+      </a>
+    </div>
+  </section>
+
+  <footer>
     <p>© 2025 Un Refugio para la Familia</p>
     <p>Personas de Dios, acercando a Dios a las personas.</p>
   </footer>
