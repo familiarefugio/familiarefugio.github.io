@@ -1,152 +1,164 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cielo en la Tierra | CET</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cielo en la Tierra - Un Refugio para la Familia</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
-    body, html {
+    html, body {
       margin: 0;
       padding: 0;
       height: 100%;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      color: #fff;
-      scroll-behavior: smooth;
       overflow-x: hidden;
+      font-family: sans-serif;
+      scroll-behavior: smooth;
     }
 
-    /* Fondo de video */
-    video#bg-video {
+    #video-fondo {
       position: fixed;
-      right: 0;
-      bottom: 0;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       min-width: 100%;
       min-height: 100%;
-      object-fit: cover;
+      width: auto;
+      height: auto;
       z-index: -1;
+      object-fit: cover;
+      object-position: center 15%;
+      background-color: black;
     }
 
-    /* Barra de navegación */
-    nav {
+    .filtro {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+      z-index: 0;
+    }
+
+    .barra-navegacion {
       position: fixed;
       top: 0;
       width: 100%;
-      background: rgba(0, 0, 0, 0.65);
+      background-color: rgba(0,0,0,0.2);
+      backdrop-filter: blur(8px) brightness(60%);
+      -webkit-backdrop-filter: blur(8px) brightness(60%);
       display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 10px 0;
-      z-index: 10;
+      justify-content: space-around;
+      padding: 1rem 0;
+      z-index: 999;
       flex-wrap: wrap;
     }
 
-    nav a {
-      color: #fff;
+    .barra-navegacion a {
+      color: white;
       text-decoration: none;
-      margin: 6px 14px;
-      font-weight: 500;
-      transition: color 0.3s;
+      font-size: 1.1rem;
+      padding: 0.5rem 1rem;
+      transition: color 0.3s, background-color 0.3s;
+      border-radius: 5px;
     }
 
-    nav a:hover {
-      color: #00bcd4;
+    .barra-navegacion a:hover,
+    .barra-navegacion a.activo {
+      background-color: #ffd700;
+      color: black;
     }
 
-    header {
+    .contenido, .seccion {
+      position: relative;
+      z-index: 1;
+      color: white;
       text-align: center;
-      margin-top: 100px;
+      padding-top: 15vh;
+      padding-left: 2rem;
+      padding-right: 2rem;
+      min-height: 100vh;
     }
 
-    header img {
-      width: 220px;
-      max-width: 80%;
-    }
-
-    section {
-      max-width: 900px;
-      margin: 50px auto;
-      background: rgba(0, 0, 0, 0.6);
-      padding: 30px;
-      border-radius: 15px;
-      line-height: 1.7;
-      text-align: justify;
+    .seccion {
+      background-color: rgba(0,0,0,0.5);
+      padding: 12vh 2rem;
     }
 
     h1, h2 {
-      text-align: center;
-      color: #00bcd4;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-size: 3rem;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+    }
+
+    p {
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+      line-height: 1.6;
+    }
+
+    .logo-cet {
+      width: 250px;
+      max-width: 80%;
+      margin: 2rem auto;
+      display: block;
     }
 
     @media (max-width: 768px) {
-      nav a {
-        margin: 4px 8px;
-        font-size: 14px;
-      }
-
-      section {
-        margin: 30px 15px;
-        padding: 20px;
-      }
+      h1 { font-size: 2rem; }
+      h2 { font-size: 2rem; }
+      p { font-size: 1.1rem; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Fondo de video -->
-  <video autoplay muted loop id="bg-video">
-    <source src="videofondo.mp4" type="video/mp4">
-    Tu navegador no soporta video en HTML5.
+  <video id="video-fondo" autoplay muted loop playsinline>
+    <source src="videofondo.mp4" type="video/mp4" />
+    Tu navegador no soporta la reproducción de video.
   </video>
 
-  <!-- Barra de navegación -->
-  <nav>
-    <a href="index.html">Inicio</a>
-    <a href="nosotros.html">Nosotros</a>
-    <a href="cet.html">CET</a>
-    <a href="#contacto">Contacto</a>
+  <div class="filtro"></div>
+
+  <nav class="barra-navegacion">
+    <a href="index.html#inicio">Inicio</a>
+    <a href="index.html#quienes-somos">Quiénes somos</a>
+    <a href="index.html#visitanos">Visítanos</a>
+    <a href="#cet">Cielo en la Tierra</a>
   </nav>
 
-  <!-- Encabezado -->
-  <header>
-    <img src="cetlogo.png" alt="Logo Cielo en la Tierra">
-    <h1>Cielo en la Tierra</h1>
-  </header>
+  <section id="cet" class="seccion">
+    <img src="cetlogo.png" alt="Logo Cielo en la Tierra" class="logo-cet" />
 
-  <!-- Contenido principal -->
-  <section>
-    <h2>¿Qué es Cielo en la Tierra?</h2>
+    <h2>Cielo en la Tierra</h2>
+
     <p>
-      <strong>Cielo en la Tierra (CET)</strong> es un tiempo de adoración y proclamación pública de la fe cristiana, 
-      realizado en espacios abiertos como la plaza de armas de nuestra comuna. 
-      Es una expresión de la iglesia que sale de sus cuatro paredes para cumplir el llamado de Jesús: 
-      <em>“Vayan y hagan discípulos en todas las naciones”</em> (Mateo 28:19).
+      <strong>Cielo en la Tierra</strong> es un tiempo especial de adoración en espacios públicos, como la plaza de armas de nuestra comuna, donde buscamos conectar el cielo con la tierra a través de la alabanza, la oración y la palabra.
     </p>
 
     <p>
-      A través de la música, la oración y la predicación, buscamos crear un ambiente donde la presencia de Dios 
-      se manifieste de manera tangible en medio de nuestra ciudad. Este espacio no es un evento más, 
-      sino una oportunidad para conectar el <strong>Cielo</strong> con la <strong>Tierra</strong>, 
-      haciendo visible el Reino de Dios entre nosotros.
-    </p>
-
-    <h2>El significado del Cielo y la Tierra</h2>
-    <p>
-      En la Biblia, el <strong>Cielo</strong> representa la presencia, autoridad y gloria de Dios, 
-      mientras que la <strong>Tierra</strong> simboliza el lugar donde vivimos, trabajamos y compartimos Su amor. 
-      Cuando adoramos, cuando proclamamos Su palabra, creamos una conexión espiritual entre ambos: 
-      el Cielo toca la Tierra, y la Tierra responde en adoración al Creador.
+      Es un llamado a salir de nuestras cuatro paredes, llevando la presencia de Dios a cada rincón, y recordando que somos llamados a <strong>ir y hacer discípulos</strong>, cumpliendo la misión encomendada por Jesús.
     </p>
 
     <p>
-      <strong>Cielo en la Tierra</strong> es, por tanto, una invitación a vivir esa realidad ahora —no como algo lejano— 
-      sino como una verdad presente que se manifiesta cuando el pueblo de Dios se une en alabanza y obediencia.
+      En estos encuentros, proclamamos que el Reino de Dios está presente aquí y ahora, y que cuando adoramos, el cielo y la tierra se encuentran: lo divino toca lo humano, y la gloria de Dios transforma nuestro entorno.
+    </p>
+
+    <p>
+      “Venga tu reino, hágase tu voluntad, así en la tierra como en el cielo.” – Mateo 6:10
     </p>
   </section>
 
-  <!-- (opcional) Pie de página -->
-  <footer style="text-align:center; margin-bottom:30px; opacity:0.8;">
-    <p>© 2025 Iglesia Metodista Libre de Coelemu | Cielo en la Tierra</p>
+  <footer class="seccion" style="text-align:center; font-size:0.8rem; min-height:auto; padding:2rem;">
+    <p>© 2025 Un Refugio para la Familia</p>
+    <p>Personas de Dios, acercando a Dios a las personas.</p>
   </footer>
 
 </body>
